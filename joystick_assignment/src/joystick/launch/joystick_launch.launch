@@ -1,3 +1,0 @@
-<launch>
-  <node name="subscriber" pkg="joystick" type="subscriber.py" output="screen"/>
-</launch>
