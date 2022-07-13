@@ -1,0 +1,2 @@
+joystick
+-DCATKIN_DEVEL_PREFIX=/home/atharva/joystick_assignment/devel -DCMAKE_INSTALL_PREFIX=/home/atharva/joystick_assignment/install -G Unix Makefiles
