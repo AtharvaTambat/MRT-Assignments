@@ -1,0 +1,2 @@
+bot_description:gazebo_envs:pysdf
+-DCATKIN_DEVEL_PREFIX=/home/atharva/gazebo_assignment/devel -DCMAKE_INSTALL_PREFIX=/home/atharva/gazebo_assignment/install -G Unix Makefiles

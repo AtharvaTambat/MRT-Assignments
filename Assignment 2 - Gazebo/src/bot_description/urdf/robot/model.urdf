@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<robot name="robot">
+  <joint name="robot__link_0_JOINT_0" type="fixed">
+    <parent link="robot__link_0"/>
+    <child link="robot__link_4"/>
+    <origin rpy="0  0  0" xyz="0.00362 -0.00572  0.25364"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="robot__link_0_JOINT_1" type="revolute">
+    <parent link="robot__link_0"/>
+    <child link="robot__link_1"/>
+    <origin rpy="0      1.5581  0" xyz="0.60263  0.00679 -0.09262"/>
+    <axis xyz="-0.99991  0       0.01269"/>
+    <limit effort="-1.0" lower="-1.79769e+308" upper="1.79769e+308" velocity="-1.0"/>
+  </joint>
+  <joint name="robot__link_0_JOINT_2" type="revolute">
+    <parent link="robot__link_0"/>
+    <child link="robot__link_2"/>
+    <origin rpy="0      -1.56868  0" xyz="-0.61628 -0.01011 -0.07831"/>
+    <axis xyz="0.99999  0       0.00211"/>
+    <limit effort="-1.0" lower="-1.79769e+308" upper="1.79769e+308" velocity="-1.0"/>
+  </joint>
+  <link name="robot__link_0">
+    <inertial>
+      <mass value="0.210647"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.0183329" ixy="0" ixz="0" iyy="0.0183329" iyz="0" izz="0.0351079"/>
+    </inertial>
+    <collision name="robot__collision">
+      <origin rpy="0  0  0" xyz="0.01003  0.00903 -0.0827"/>
+      <geometry>
+        <box size="1 1 0.210655"/>
+      </geometry>
+    </collision>
+    <visual name="robot__visual">
+      <origin rpy="0  0  0" xyz="0.01003  0.00903 -0.0827"/>
+      <geometry>
+        <box size="1 1 0.210655"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="robot__link_1">
+    <inertial>
+      <mass value="0.197908"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.0130152" ixy="0" ixz="0" iyy="0.0130152" iyz="0" izz="0.0247385"/>
+    </inertial>
+    <collision name="robot__collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.197905" radius="0.5"/>
+      </geometry>
+    </collision>
+    <visual name="robot__visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.197905" radius="0.5"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="robot__link_2">
+    <inertial>
+      <mass value="0.245765"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.0165974" ixy="0" ixz="0" iyy="0.0165974" iyz="0" izz="0.0307207"/>
+    </inertial>
+    <collision name="robot__collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.24577" radius="0.5"/>
+      </geometry>
+    </collision>
+    <visual name="robot__visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.24577" radius="0.5"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="robot__link_4">
+    <inertial>
+      <mass value="0.0591224"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.00160594" ixy="0" ixz="0" iyy="0.00160594" iyz="0" izz="0.000902384"/>
+    </inertial>
+    <collision name="robot__collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.484125" radius="0.174717"/>
+      </geometry>
+    </collision>
+    <visual name="robot__visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.484125" radius="0.174717"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>

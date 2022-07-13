@@ -1,0 +1,5 @@
+<launch>
+  <node name="roboclaw" pkg="rover" type="roboclaw.py" />
+  <node name="full_drive_run" pkg="rover" type="full_drive_run.py" />
+  <node name="autonomous" pkg="rover" type="autonomous.py" />
+</launch>
