@@ -1,0 +1,226 @@
+<?xml version="1.0" ?>
+<robot name="rover">
+  <!-- Body -->
+
+  <joint name="rover__link_0_JOINT_0" type="fixed">
+    <parent link="rover__link_0"/>
+    <child link="rover__link_2"/>
+    <origin rpy="0  0  0" xyz="-0.00729 -0.02691  0.32674"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="rover__link_0_JOINT_2" type="revolute">
+    <parent link="rover__link_0"/>
+    <child link="rover__link_1"/>
+    <origin rpy="0       1.56136  0" xyz="0.21463 -0.1606  -0.05432"/>
+    <axis xyz="-0.99995  0       0.00943"/>
+    <limit effort="-1.0" lower="-1.79769e+308" upper="1.79769e+308" velocity="-1.0"/>
+  </joint>
+  <joint name="rover__link_0_JOINT_3" type="revolute">
+    <parent link="rover__link_0"/>
+    <child link="rover__link_1_clone"/>
+    <origin rpy="0       1.56136  0" xyz="0.21563  0.15727 -0.06313"/>
+    <axis xyz="-0.99995  0       0.00943"/>
+    <limit effort="-1.0" lower="-1.79769e+308" upper="1.79769e+308" velocity="-1.0"/>
+  </joint>
+  <joint name="rover__link_0_JOINT_4" type="revolute">
+    <parent link="rover__link_0"/>
+    <child link="rover__link_1_clone_0"/>
+    <origin rpy="0       1.56136  0" xyz="-0.21854 -0.13393 -0.07041"/>
+    <axis xyz="-0.99995  0       0.00943"/>
+    <limit effort="-1.0" lower="-1.79769e+308" upper="1.79769e+308" velocity="-1.0"/>
+  </joint>
+  <joint name="rover__link_0_JOINT_5" type="revolute">
+    <parent link="rover__link_0"/>
+    <child link="rover__link_1_clone_0_clone"/>
+    <origin rpy="0       1.56136  0" xyz="-0.20779  0.16959 -0.06981"/>
+    <axis xyz="-0.99995  0       0.00943"/>
+    <limit effort="-1.0" lower="-1.79769e+308" upper="1.79769e+308" velocity="-1.0"/>
+  </joint>
+  <link name="rover__link_0">
+    <inertial>
+      <mass value="0.0144661"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.000168733" ixy="0" ixz="0" iyy="0.000175775" iyz="0" izz="0.000314929"/>
+    </inertial>
+    <collision name="rover__collision">
+      <origin rpy="0  0  0" xyz="0.00336 -0.00541 -0.06905"/>
+      <geometry>
+        <box size="0.365433 0.357351 0.110761"/>
+      </geometry>
+    </collision>
+    <visual name="rover__visual">
+      <origin rpy="0  0  0" xyz="0.00336 -0.00541 -0.06905"/>
+      <geometry>
+        <box size="0.365433 0.357351 0.110761"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="rover__link_1">
+    <inertial>
+      <mass value="0.00170822"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="3.75408e-06" ixy="0" ixz="0" iyy="3.75408e-06" iyz="0" izz="6.65238e-06"/>
+    </inertial>
+    <collision name="rover__collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.054826" radius="0.088254"/>
+      </geometry>
+    </collision>
+    <visual name="rover__visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.0548257" radius="0.0882535"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="rover__link_1_clone">
+    <inertial>
+      <mass value="0.00170822"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="3.75408e-06" ixy="0" ixz="0" iyy="3.75408e-06" iyz="0" izz="6.65238e-06"/>
+    </inertial>
+    <collision name="rover__collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.054826" radius="0.088253"/>
+      </geometry>
+    </collision>
+    <visual name="rover__visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.0548257" radius="0.0882535"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="rover__link_1_clone_0">
+    <inertial>
+      <mass value="0.00170822"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="3.75408e-06" ixy="0" ixz="0" iyy="3.75408e-06" iyz="0" izz="6.65238e-06"/>
+    </inertial>
+    <collision name="rover__collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.054826" radius="0.088253"/>
+      </geometry>
+    </collision>
+    <visual name="rover__visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.0548257" radius="0.0882535"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="rover__link_1_clone_0_clone">
+    <inertial>
+      <mass value="0.00170822"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="3.75408e-06" ixy="0" ixz="0" iyy="3.75408e-06" iyz="0" izz="6.65238e-06"/>
+    </inertial>
+    <collision name="rover__collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.054826" radius="0.088253"/>
+      </geometry>
+    </collision>
+    <visual name="rover__visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.0548257" radius="0.0882535"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="rover__link_2">
+    <inertial>
+      <mass value="0.00240187"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.000110523" ixy="0" ixz="0" iyy="0.000110523" iyz="0" izz="9.62114e-07"/>
+    </inertial>
+    <collision name="rover__collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.741472" radius="0.028304"/>
+      </geometry>
+    </collision>
+    <visual name="rover__visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.741472" radius="0.0283044"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- Camera -->
+  <link name="camera_link">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+    <box size="0.05 0.05 0.05"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+    <box size="0.05 0.05 0.05"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+  </link>
+
+  <joint name="camera_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin xyz="-0.02 -0.02 0.741472" rpy="0 0 0"/>
+    <parent link="rover__link_0"/>
+    <child link="camera_link"/>
+  </joint>
+
+ <!-- camera -->
+  <gazebo reference="camera_link">
+    <sensor type="camera" name="camera1">
+      <update_rate>30.0</update_rate>
+      <camera name="head">
+        <horizontal_fov>1.3962634</horizontal_fov>
+        <image>
+          <width>800</width>
+          <height>800</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>300</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise is sampled independently per pixel on each frame.
+               That pixel's noise value is added to each of its color
+               channels, which at that point lie in the range [0,1]. -->
+          <mean>0.0</mean>
+          <stddev>0.007</stddev>
+        </noise>
+      </camera>
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <cameraName>rrbot/camera1</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera_link</frameName>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+    </sensor>
+  </gazebo>
+</robot>
