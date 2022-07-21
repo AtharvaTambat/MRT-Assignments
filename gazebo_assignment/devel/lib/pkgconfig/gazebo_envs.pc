@@ -1,8 +1,0 @@
-prefix=/home/atharva/gazebo_assignment/devel
-
-Name: gazebo_envs
-Description: Description of gazebo_envs
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
