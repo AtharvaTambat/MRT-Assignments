@@ -1,2 +1,0 @@
-beginner_tutorial:urdf_tutorial:vision
--DCATKIN_DEVEL_PREFIX=/home/atharva/mrt_assignment1/devel -DCMAKE_INSTALL_PREFIX=/home/atharva/mrt_assignment1/install -G Unix Makefiles

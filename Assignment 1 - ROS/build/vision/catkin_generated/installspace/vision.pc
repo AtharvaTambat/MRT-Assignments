@@ -1,8 +1,0 @@
-prefix=/home/atharva/mrt_assignment1/install
-
-Name: vision
-Description: Description of vision
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

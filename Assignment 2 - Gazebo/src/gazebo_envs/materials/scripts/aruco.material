@@ -9,7 +9,7 @@ material aruco/standard
 
       texture_unit
       {
-        texture ../textures/MarkerData_1234.png
+        texture ../textures/aruco.png
         scale 1 1
       }
     }

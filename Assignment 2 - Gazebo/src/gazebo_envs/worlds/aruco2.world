@@ -585,10 +585,10 @@
       <static>1</static>
     </model>
     <state world_name='default'>
-      <sim_time>221 271000000</sim_time>
-      <real_time>221 941832498</real_time>
-      <wall_time>1656870553 750980185</wall_time>
-      <iterations>221271</iterations>
+      <sim_time>395 122000000</sim_time>
+      <real_time>254 369144865</real_time>
+      <wall_time>1658085407 306130293</wall_time>
+      <iterations>173851</iterations>
       <model name='aruco'>
         <pose frame=''>1.075 -4.555 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -669,14 +669,48 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+      <model name='rover'>
+        <pose frame=''>1.08844 -6.01246 0.15458 0.027815 0.035402 -0.069876</pose>
+        <scale>1 1 1</scale>
+        <link name='rover__link_0'>
+          <pose frame=''>1.08844 -6.01246 0.15458 0.027815 0.035402 -0.069876</pose>
+          <velocity>-0.000273 -0.001044 0.005506 0.010729 -0.013774 0.001737</velocity>
+          <acceleration>-3.38531 -1.94266 11.5358 2.67115 -0.62905 2.05385</acceleration>
+          <wrench>-0.057137 -0.032788 0.194702 0 -0 0</wrench>
+        </link>
+        <link name='rover__link_1'>
+          <pose frame=''>1.28923 -6.18593 0.088254 1.57039 1.52677 2.19416</pose>
+          <velocity>0.000745 -0.000514 0.006267 -0.007795 -0.00159 -0.055092</velocity>
+          <acceleration>0.261702 0.210254 14.1764 0.237493 -0.361852 -2.0336</acceleration>
+          <wrench>0.000447 0.000359 0.024216 0 -0 0</wrench>
+        </link>
+        <link name='rover__link_1_clone'>
+          <pose frame=''>1.31243 -5.86878 0.088253 -1.57058 1.52678 2.61812</pose>
+          <velocity>5.7e-05 0.000354 0.010525 -0.003746 0.001308 -0.015013</velocity>
+          <acceleration>-0.457465 0.867563 22.2407 -0.933798 0.070133 1.39692</acceleration>
+          <wrench>-0.000781 0.001482 0.037992 0 -0 0</wrench>
+        </link>
+        <link name='rover__link_1_clone_0'>
+          <pose frame=''>0.858742 -6.12862 0.088254 1.56987 1.52679 2.19318</pose>
+          <velocity>0.000636 -0.001094 0.000897 -0.002997 -0.003872 -0.061749</velocity>
+          <acceleration>-0.29607 -0.389468 1.54174 0.70565 -0.131358 2.79439</acceleration>
+          <wrench>-0.000506 -0.000665 0.002634 0 -0 0</wrench>
+        </link>
+        <link name='rover__link_1_clone_0_clone'>
+          <pose frame=''>0.890959 -5.82675 0.096909 0.143326 1.51647 2.37552</pose>
+          <velocity>0.000253 -0.000724 0.004765 0.032853 -0.03387 0.664577</velocity>
+          <acceleration>-0.224756 0.12145 9.337 -1.40031 0.195182 -1.57923</acceleration>
+          <wrench>-0.000384 0.000207 0.01595 0 -0 0</wrench>
+        </link>
+      </model>
       <model name='unit_box'>
-        <pose frame=''>2.44436 -6.00429 0.5 0 1e-06 -4.4e-05</pose>
-        <scale>0.18826 1 1</scale>
+        <pose frame=''>2.45801 -6.03964 0.870577 0.034844 0.026243 0.001125</pose>
+        <scale>0.050858 0.327881 0.339477</scale>
         <link name='link'>
-          <pose frame=''>2.44436 -6.00429 0.5 0 1e-06 -4.4e-05</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>1.05988 -4.5e-05 -0.416788 -3.1415 1.02183 -3.14159</acceleration>
-          <wrench>1.05988 -4.5e-05 -0.416788 0 -0 0</wrench>
+          <pose frame=''>2.45801 -6.03964 0.870577 0.034844 0.026243 0.001125</pose>
+          <velocity>9.2e-05 -0.000318 0.001584 0.000828 0.000239 -0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <light name='sun'>
@@ -700,7 +734,7 @@
         <collision name='collision'>
           <geometry>
             <box>
-              <size>1 1 2</size>
+              <size>0.999996 1 2</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -720,14 +754,14 @@
         <visual name='visual'>
           <geometry>
             <box>
-              <size>1 1 1</size>
+              <size>0.999996 1 0.999999</size>
             </box>
           </geometry>
           <material>
             <script>
-                <uri>file://scripts</uri>
-                <uri>file://textures</uri>
-                <name>aruco/standard</name>
+              <uri>file://scripts</uri>
+              <uri>file://textures</uri>
+              <name>aruco/standard</name>
             </script>
           </material>
         </visual>
@@ -738,10 +772,432 @@
     </model>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>-8.27035 -9.62315 7.96099 -0 0.509794 0.368192</pose>
+        <pose frame=''>0.382076 -6.10116 1.39273 0 0.465796 -0.107811</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
     </gui>
+    <model name='rover'>
+      <link name='rover__link_0'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>-0.001049 -0.003841 0.046937 0 -0 0</pose>
+          <mass>0.016878</mass>
+          <inertia>
+            <ixx>0.000506486</ixx>
+            <ixy>-4.07155e-07</ixy>
+            <ixz>5.03815e-06</ixz>
+            <iyy>0.000512147</iyy>
+            <iyz>1.82238e-05</iyz>
+            <izz>0.000318498</izz>
+          </inertia>
+        </inertial>
+        <collision name='rover__link_0_fixed_joint_lump__rover__collision_collision'>
+          <pose frame=''>0.00336 -0.00541 -0.06905 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.365433 0.357351 0.110761</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='rover__link_0_fixed_joint_lump__camera_link_collision_1'>
+          <pose frame=''>-0.02 -0.02 0.741472 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.05 0.05 0.05</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='rover__link_0_fixed_joint_lump__rover__collision_collision_2'>
+          <pose frame=''>-0.00729 -0.02691 0.32674 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.741472</length>
+              <radius>0.028304</radius>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='rover__link_0_fixed_joint_lump__rover__visual_visual'>
+          <pose frame=''>0.00336 -0.00541 -0.06905 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.365433 0.357351 0.110761</size>
+            </box>
+          </geometry>
+        </visual>
+        <visual name='rover__link_0_fixed_joint_lump__camera_link_visual_1'>
+          <pose frame=''>-0.02 -0.02 0.741472 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.05 0.05 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>__default__</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='rover__link_0_fixed_joint_lump__rover__visual_visual_2'>
+          <pose frame=''>-0.00729 -0.02691 0.32674 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.741472</length>
+              <radius>0.0283044</radius>
+            </cylinder>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <sensor name='camera1' type='camera'>
+          <update_rate>30</update_rate>
+          <camera name='head'>
+            <horizontal_fov>1.39626</horizontal_fov>
+            <image>
+              <width>800</width>
+              <height>800</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.02</near>
+              <far>300</far>
+            </clip>
+            <noise>
+              <type>gaussian</type>
+              <mean>0</mean>
+              <stddev>0.007</stddev>
+            </noise>
+          </camera>
+          <plugin name='camera_controller' filename='libgazebo_ros_camera.so'>
+            <alwaysOn>1</alwaysOn>
+            <updateRate>0.0</updateRate>
+            <cameraName>rrbot/camera1</cameraName>
+            <imageTopicName>image_raw</imageTopicName>
+            <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+            <frameName>camera_link</frameName>
+            <hackBaseline>0.07</hackBaseline>
+            <distortionK1>0.0</distortionK1>
+            <distortionK2>0.0</distortionK2>
+            <distortionK3>0.0</distortionK3>
+            <distortionT1>0.0</distortionT1>
+            <distortionT2>0.0</distortionT2>
+            <robotNamespace>/</robotNamespace>
+          </plugin>
+          <pose frame=''>-0.02 -0.02 0.741472 0 -0 0</pose>
+        </sensor>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='rover__link_1'>
+        <pose frame=''>0.21463 -0.1606 -0.05432 0 1.56136 0</pose>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <mass>0.00170822</mass>
+          <inertia>
+            <ixx>3.75408e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.75408e-06</iyy>
+            <iyz>0</iyz>
+            <izz>6.65238e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='rover__link_1_fixed_joint_lump__rover__collision_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.054826</length>
+              <radius>0.088254</radius>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='rover__link_1_fixed_joint_lump__rover__visual_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.0548257</length>
+              <radius>0.0882535</radius>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='rover__link_0_JOINT_2' type='revolute'>
+        <child>rover__link_1</child>
+        <parent>rover__link_0</parent>
+        <axis>
+          <xyz>-6e-06 0 0.999994</xyz>
+          <limit>
+            <lower>-1.79769e+308</lower>
+            <upper>1.79769e+308</upper>
+            <effort>-1</effort>
+            <velocity>-1</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='rover__link_1_clone'>
+        <pose frame=''>0.21563 0.15727 -0.06313 0 1.56136 0</pose>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <mass>0.00170822</mass>
+          <inertia>
+            <ixx>3.75408e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.75408e-06</iyy>
+            <iyz>0</iyz>
+            <izz>6.65238e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='rover__link_1_clone_fixed_joint_lump__rover__collision_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.054826</length>
+              <radius>0.088253</radius>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='rover__link_1_clone_fixed_joint_lump__rover__visual_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.0548257</length>
+              <radius>0.0882535</radius>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='rover__link_0_JOINT_3' type='revolute'>
+        <child>rover__link_1_clone</child>
+        <parent>rover__link_0</parent>
+        <axis>
+          <xyz>-6e-06 0 0.999994</xyz>
+          <limit>
+            <lower>-1.79769e+308</lower>
+            <upper>1.79769e+308</upper>
+            <effort>-1</effort>
+            <velocity>-1</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='rover__link_1_clone_0'>
+        <pose frame=''>-0.21854 -0.13393 -0.07041 0 1.56136 0</pose>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <mass>0.00170822</mass>
+          <inertia>
+            <ixx>3.75408e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.75408e-06</iyy>
+            <iyz>0</iyz>
+            <izz>6.65238e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='rover__link_1_clone_0_fixed_joint_lump__rover__collision_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.054826</length>
+              <radius>0.088253</radius>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='rover__link_1_clone_0_fixed_joint_lump__rover__visual_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.0548257</length>
+              <radius>0.0882535</radius>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='rover__link_0_JOINT_4' type='revolute'>
+        <child>rover__link_1_clone_0</child>
+        <parent>rover__link_0</parent>
+        <axis>
+          <xyz>-6e-06 0 0.999994</xyz>
+          <limit>
+            <lower>-1.79769e+308</lower>
+            <upper>1.79769e+308</upper>
+            <effort>-1</effort>
+            <velocity>-1</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='rover__link_1_clone_0_clone'>
+        <pose frame=''>-0.20779 0.16959 -0.06981 0 1.56136 0</pose>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <mass>0.00170822</mass>
+          <inertia>
+            <ixx>3.75408e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.75408e-06</iyy>
+            <iyz>0</iyz>
+            <izz>6.65238e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='rover__link_1_clone_0_clone_fixed_joint_lump__rover__collision_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.054826</length>
+              <radius>0.088253</radius>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='rover__link_1_clone_0_clone_fixed_joint_lump__rover__visual_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.0548257</length>
+              <radius>0.0882535</radius>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='rover__link_0_JOINT_5' type='revolute'>
+        <child>rover__link_1_clone_0_clone</child>
+        <parent>rover__link_0</parent>
+        <axis>
+          <xyz>-6e-06 0 0.999994</xyz>
+          <limit>
+            <lower>-1.79769e+308</lower>
+            <upper>1.79769e+308</upper>
+            <effort>-1</effort>
+            <velocity>-1</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <pose frame=''>1 -6 0 0 -0 0</pose>
+    </model>
   </world>
 </sdf>
