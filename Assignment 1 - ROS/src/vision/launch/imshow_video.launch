@@ -1,0 +1,6 @@
+<launch>
+
+<node name="bigbuckbunny" pkg="vision" type="video_imshow.py" output="screen" respawn="true" cwd = "node"/>
+
+</launch>
+

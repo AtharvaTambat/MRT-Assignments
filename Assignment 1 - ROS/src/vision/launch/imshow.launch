@@ -1,0 +1,6 @@
+<launch>
+
+<node name="lena_image" pkg="vision" type="image_imshow.py" output="screen" respawn="true" cwd = "node"/>
+
+</launch>
+

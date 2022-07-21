@@ -1,0 +1,8 @@
+prefix=/home/atharva/mrt_assignment1/install
+
+Name: urdf_tutoial
+Description: Description of urdf_tutoial
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

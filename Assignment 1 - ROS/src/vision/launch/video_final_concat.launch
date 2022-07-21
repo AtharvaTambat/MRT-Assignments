@@ -1,0 +1,14 @@
+<launch>
+
+	<node name="bigbuckbunny_Publisher" 
+	pkg="vision" 
+	type="video_imshow_publish.py" 
+	output="screen"
+	cwd = "node"/>
+
+	<node name="bigbuckbunny_Subscriber" 
+	pkg="vision" 
+	type="video_final_concat.py" 
+	output="screen"/>
+
+</launch>
